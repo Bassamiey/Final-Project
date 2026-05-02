@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager</title>
     <link rel="stylesheet" href="css/style.css">
-</head>
     <script src="js/app.js"></script>
+</head>
 <body>
     <header>
         <nav>
@@ -30,14 +30,14 @@
                 </div>
                 <div id="header-right">
                     <h2>My Board</h2>
-                    <span class="task-counter">0 tasks</span>
+                    <span class="task-counter" id="total-counter">0 tasks</span>
                 </div>
             </div>
             <div class="column" id="col-todo">
                 <div class="column-header">
                     <h2>To Do's</h2>
                     <div class="column-actions">
-                        <span class="task-counter">0</span>
+                        <span class="task-counter" id="count-todo">0</span>
                         <button class="btn-add">Add</button>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                 <div class="column-header">
                     <h2>In Progress</h2>
                     <div class="column-actions">
-                        <span class="task-counter">0</span>
+                        <span class="task-counter" id="count-inprogress">0</span>
                         <button class="btn-add">Add</button>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                 <div class="column-header">
                     <h2>Done</h2>
                     <div class="column-actions">
-                        <span class="task-counter">0</span>
+                        <span class="task-counter" id="count-done">0</span>
                         <button class="btn-add">Add</button>
                     </div>
                 </div>
@@ -65,5 +65,25 @@
             <div>about us</div>
         </section>
     </main>
+
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Add Task</h3>
+                <button class="modal-close" id="modal-close">✕</button>
+            </div>
+            <div class="modal-body">
+                <label>Title</label>
+                <input type="text" id="modal-title" placeholder="Enter task title..." />
+                <label>Description</label>
+                <textarea id="modal-desc" placeholder="Enter description (optional)..."></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" id="btn-cancel">Cancel</button>
+                <button class="btn-confirm">Add Task</button>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
