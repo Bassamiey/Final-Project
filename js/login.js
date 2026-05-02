@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
     
 
     const credential = {
-        member1 : {username : "bassam", password : "bassam123"},
-        member2 : {username : "pau", password: "pau123"}
-    }
+    bassam: { password: "bassam123" },
+    pau:    { password: "pau123" }
+}
 
     function login (username, password) {
 
