@@ -11,6 +11,8 @@
     --color-border:    #4A5C6A;
     --color-text-muted: #9BA8AB;
     --color-text:      #CCD0CF;
+    --color-accent:     #4FC3F7;
+    --color-accent-dim: rgba(79, 195, 247, 0.12);
 }
 
 body {
@@ -36,20 +38,37 @@ nav {
     gap: 10px;
 }
 
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
 nav .nav-links {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
 }
 
 nav .nav-links a {
     color: var(--color-text);
     text-decoration: none;
     font-weight: 14px;
+    padding: 6px 14px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    transition: 0.2s;
 }
 
 nav .nav-links a:hover {
     color: white;
+}
+
+.activeNav {
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    background-color: var(--color-accent-dim);
+    border-radius: 6px;
+    padding: 6px 14px;
 }
 
 main {

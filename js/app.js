@@ -2,29 +2,42 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ── Navigation ──
     let homeLink  = document.querySelector("#home-link");
-    let boardLink = document.querySelector("#board-link");
-    let aboutLink = document.querySelector("#about-link");
+let boardLink = document.querySelector("#board-link");
+let aboutLink = document.querySelector("#about-link");
 
-    homeLink.addEventListener("click", function(e) {
-        e.preventDefault();
-        document.querySelector("#home").style.display  = "block";
-        document.querySelector("#board").style.display = "none";
-        document.querySelector("#about").style.display = "none";
-    });
+let activePage = document.querySelectorAll(".nav");
 
-    boardLink.addEventListener("click", function(e) {
-        e.preventDefault();
-        document.querySelector("#home").style.display  = "none";
-        document.querySelector("#board").style.display = "grid";
-        document.querySelector("#about").style.display = "none";
-    });
+// ── Save & restore active page on refresh ──
+function navigateTo(page) {
+    document.querySelector("#home").style.display  = page === "home"  ? "block" : "none";
+    document.querySelector("#board").style.display = page === "board" ? "grid"  : "none";
+    document.querySelector("#about").style.display = page === "about" ? "block" : "none";
 
-    aboutLink.addEventListener("click", function(e) {
-        e.preventDefault();
-        document.querySelector("#home").style.display  = "none";
-        document.querySelector("#board").style.display = "none";
-        document.querySelector("#about").style.display = "block";
-    });
+    homeLink.classList.toggle("activeNav",  page === "home");
+    boardLink.classList.toggle("activeNav", page === "board");
+    aboutLink.classList.toggle("activeNav", page === "about");
+
+    sessionStorage.setItem("activePage", page);
+}
+
+// ── Restore last page on load (defaults to home) ──
+const savedPage = sessionStorage.getItem("activePage") || "home";
+navigateTo(savedPage);
+
+homeLink.addEventListener("click", function(e) {
+    e.preventDefault();
+    navigateTo("home");
+});
+
+boardLink.addEventListener("click", function(e) {
+    e.preventDefault();
+    navigateTo("board");
+});
+
+aboutLink.addEventListener("click", function(e) {
+    e.preventDefault();
+    navigateTo("about");
+});
 
     // ── Board Data ──
     let board = {
