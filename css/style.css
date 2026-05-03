@@ -5,14 +5,14 @@
 }
 
 :root {
-    --color-bg:        #06141B;
-    --color-surface:   #11212D;
-    --color-card:      #253745;
-    --color-border:    #4A5C6A;
-    --color-text-muted: #9BA8AB;
-    --color-text:      #CCD0CF;
-    --color-accent:     #4FC3F7;
-    --color-accent-dim: rgba(79, 195, 247, 0.12);
+    --color-bg:          #06141B;
+    --color-surface:     #11212D;
+    --color-card:        #253745;
+    --color-border:      #4A5C6A;
+    --color-text-muted:  #9BA8AB;
+    --color-text:        #CCD0CF;
+    --color-accent:      #4FC3F7;
+    --color-accent-dim:  rgba(79, 195, 247, 0.12);
 }
 
 body {
@@ -22,7 +22,7 @@ body {
     height: fit-content;
 }
 
-/* header */
+/* ── Header ── */
 header {
     background-color: var(--color-surface);
     border-bottom: 1px solid var(--color-border);
@@ -75,14 +75,137 @@ main {
     padding: 20px;
 }
 
-/* Home Section */
+/* ── Home Section ── */
 .home-sect {
     display: block;
-    padding: 20px;
-    border: 1px solid white;
+    padding: 40px 20px;
 }
 
-/* Main Board Section */
+.home-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.home-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 480px;
+}
+
+.home-headline {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-text);
+}
+
+.home-accent {
+    color: var(--color-accent);
+}
+
+.home-desc {
+    font-size: 16px;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+/* Mini board preview */
+.home-preview {
+    display: flex;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 24px;
+    backdrop-filter: blur(10px);
+}
+
+.preview-col {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: 12px;
+    min-width: 120px;
+}
+
+.preview-col-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.preview-task {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 12px;
+    color: var(--color-text);
+    margin-top: 8px;
+}
+
+.preview-task--done {
+    color: var(--color-accent);
+}
+
+/* Divider */
+.home-divider {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 40px 20px;
+    opacity: 0.5;
+}
+
+/* Feature cards */
+.home-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 0 20px 40px;
+}
+
+.feature-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+}
+
+.feature-icon {
+    font-size: 24px;
+}
+
+.feature-card strong {
+    font-size: 16px;
+    color: var(--color-text);
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+/* ── Board Section ── */
 .board-sec {
     display: none;
     grid-template-columns: 1fr 1fr 1fr;
@@ -108,14 +231,14 @@ main {
     gap: 10px;
 }
 
-/* Column */
+/* ── Column ── */
 .column {
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: 20px;
     min-height: 200px;
     height: fit-content;
-    padding: 20px 20px;
+    padding: 20px;
 }
 
 .column-header {
@@ -132,7 +255,7 @@ main {
     gap: 8px;
 }
 
-/* Task Card */
+/* ── Task Card ── */
 .task-card {
     background-color: var(--color-card);
     border: 1px solid var(--color-border);
@@ -160,7 +283,7 @@ main {
     color: var(--color-text-muted);
 }
 
-/* Task Action */
+/* ── Task Actions ── */
 .task-actions {
     display: flex;
     justify-content: space-between;
@@ -197,15 +320,171 @@ main {
     cursor: pointer;
 }
 
-/* about section */
+/* ── About Section ── */
 .about-sec {
     display: none;
-    padding: 20px;
+    padding: 60px 40px;
     color: var(--color-text);
-    border: 1px solid white;
+    text-align: center;
 }
 
-/* Modal */
+.about-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 16px;
+}
+
+.about-accent {
+    color: var(--color-accent);
+}
+
+.about-desc {
+    font-size: 18px;
+    color: var(--color-text-muted);
+    margin-bottom: 40px;
+}
+
+.about-divider {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    opacity: 0.5;
+    margin: 40px 0;
+}
+
+/* Info Cards Grid */
+.about-info-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.about-info-card {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    padding: 28px;
+    border-radius: 12px;
+    text-align: center;
+    width: calc(50% - 20px);
+    min-width: 260px;
+    transition: transform 0.3s;
+}
+
+.about-info-card:hover {
+    transform: scale(1.03);
+}
+
+.about-info-card span {
+    font-size: 18px;
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+/* Team */
+.about-team {
+    padding: 40px 0;
+}
+
+.about-team-intro {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.5;
+}
+
+.about-team-roster {
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    justify-content: center;
+    gap: 24px;
+    margin: 0 auto;
+}
+
+.about-member-card {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    padding: 28px;
+    border-radius: 12px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.about-member-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+}
+
+.about-member-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.about-member-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-border);
+}
+
+.about-member-meta h3 {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 1.1rem;
+}
+
+.about-member-role {
+    margin: 4px 0 0;
+    font-size: 0.85rem;
+    color: var(--color-accent);
+}
+
+.about-member-bio {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    margin: 12px 0 20px;
+    min-height: 60px;
+}
+
+.about-member-btn {
+    display: block;
+    text-align: center;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid var(--color-border);
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.about-member-btn:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #06141B;
+}
+
+@media (max-width: 880px) {
+    .about-team-roster {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+    .about-info-card {
+        width: 100%;
+    }
+}
+
+/* ── Modal ── */
 .modal-overlay {
     display: none;
     position: fixed;

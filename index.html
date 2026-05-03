@@ -18,11 +18,62 @@
             </div>
         </nav>
     </header>
+
     <main>
+
+        <!-- Home Section -->
         <section class="home-sect" id="home">
-            <h2>Welcome to Your Task Manager</h2>
-            <p>Organize your tasks efficiently and boost your productivity.</p>
+
+            <div class="home-hero">
+                <div class="home-text">
+                    <h1 class="home-headline">
+                        Manage your tasks <br><span class="home-accent">In a smart way</span>
+                    </h1>
+                    <p class="home-desc">
+                        This system helps you organize your work into clear stages — so nothing slips through the cracks.
+                    </p>
+                </div>
+
+                <div class="home-preview">
+                    <div class="preview-col">
+                        <h3 class="preview-col-title">TO DO</h3>
+                        <div class="preview-task">Design Homepage</div>
+                        <div class="preview-task">Write Report</div>
+                    </div>
+                    <div class="preview-col">
+                        <h3 class="preview-col-title">IN PROGRESS</h3>
+                        <div class="preview-task">Build the app</div>
+                    </div>
+                    <div class="preview-col">
+                        <h3 class="preview-col-title">DONE</h3>
+                        <div class="preview-task preview-task--done">Plan project ✓</div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="home-divider">
+
+            <div class="home-features">
+                <div class="feature-card">
+                    <span class="feature-icon">📝</span>
+                    <strong>Streamline</strong>
+                    <p>Divide your workflow into To Do, In Progress, and Completed columns for ultimate visibility.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">⚡</span>
+                    <strong>Peak Productivity</strong>
+                    <p>Eliminate the noise and focus on what matters most — total clarity, zero distractions.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💾</span>
+                    <strong>Auto Saved</strong>
+                    <p>Your progress is secured instantly. Pick up exactly where you left off, every time.</p>
+                </div>
+            </div>
+
         </section>
+
+        <!-- Board Section -->
         <section class="board-sec" id="board">
             <div class="board-header">
                 <div id="header-left">
@@ -61,9 +112,100 @@
                 </div>
             </div>
         </section>
+
+        <!-- About Section -->
         <section class="about-sec" id="about">
-            <div>about us</div>
+
+            <h1 class="about-title">About <span class="about-accent">Project Task Management Board</span></h1>
+            <p class="about-desc">A simple, clean task manager built for our class project to help students stay organized.</p>
+
+            <hr class="about-divider">
+
+            <div class="about-info-grid">
+                <div class="about-info-card">
+                    <span>What is this project?</span><br><br>
+                    The Project Task Management Board is a lightweight Kanban-style tool we built to manage
+                    school assignments and group work. It runs right in your browser so you can keep track
+                    of what needs to get done without any complicated setup.
+                </div>
+                <div class="about-info-card">
+                    <span>Who built this?</span><br><br>
+                    We built this as a learning project to practice our web development skills. We stuck to the basics—using
+                    just HTML, CSS, and JavaScript. No fancy frameworks or external libraries, just clean code and a lot of
+                    trial and error!
+                </div>
+                <div class="about-info-card">
+                    <span>How it works</span><br><br>
+                    You can create tasks, move them between columns as you work on them, and delete them when
+                    you're finished. Everything saves automatically in your browser's storage, so your progress won't disappear
+                    when you refresh the page.
+                </div>
+                <div class="about-info-card">
+                    <span>Why use it?</span><br><br>
+                    Sometimes big project management tools are just too much for a simple school assignment. We wanted to make
+                    something fast and easy to use that gets out of your way so you can actually focus on finishing your homework.
+                </div>
+            </div>
+
+            <hr class="about-divider">
+
+            <section class="about-team">
+                <h2 class="about-team-intro">Meet our dedicated team of creators</h2>
+                <div class="about-team-roster">
+
+                    <div class="about-member-card">
+                        <div class="about-member-header">
+                            <img src="member1.jpg" alt="Member 1" class="about-member-avatar">
+                            <div class="about-member-meta">
+                                <h3>Name Here</h3>
+                                <p class="about-member-role">Back End Developer</p>
+                            </div>
+                        </div>
+                        <p class="about-member-bio">Description ng member</p>
+                        <a href="cv1.pdf" class="about-member-btn">View CV</a>
+                    </div>
+
+                    <div class="about-member-card">
+                        <div class="about-member-header">
+                            <img src="member2.jpg" alt="Member 2" class="about-member-avatar">
+                            <div class="about-member-meta">
+                                <h3>Name Here</h3>
+                                <p class="about-member-role">Front End Developer</p>
+                            </div>
+                        </div>
+                        <p class="about-member-bio">Description ng member</p>
+                        <a href="cv2.pdf" class="about-member-btn">View CV</a>
+                    </div>
+
+                    <div class="about-member-card">
+                        <div class="about-member-header">
+                            <img src="member3.jpg" alt="Member 3" class="about-member-avatar">
+                            <div class="about-member-meta">
+                                <h3>Name Here</h3>
+                                <p class="about-member-role">Front End Developer</p>
+                            </div>
+                        </div>
+                        <p class="about-member-bio">Description ng member</p>
+                        <a href="cv3.pdf" class="about-member-btn">View CV</a>
+                    </div>
+
+                    <div class="about-member-card">
+                        <div class="about-member-header">
+                            <img src="member4.jpg" alt="Member 4" class="about-member-avatar">
+                            <div class="about-member-meta">
+                                <h3>Name Here</h3>
+                                <p class="about-member-role">Front End Developer</p>
+                            </div>
+                        </div>
+                        <p class="about-member-bio">Description ng member</p>
+                        <a href="cv4.pdf" class="about-member-btn">View CV</a>
+                    </div>
+
+                </div>
+            </section>
+
         </section>
+
     </main>
 
     <div class="modal-overlay" id="modal-overlay">
