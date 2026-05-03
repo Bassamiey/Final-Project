@@ -5,17 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Flow</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="logo/icon.png">
+    <link rel="icon" href="assets/logo/icon.png">
     <script src="js/app.js"></script>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Task Manager</div>
+            <div class="logo">
+                <div class="img">
+                    <img src="assets/logo/icon.png" alt="">
+                </div>    
+                <span>Simple Task Manager System</span>
+            </div>
             <div class="nav-links">
                 <a href="#home" class="nav" id="home-link">Home</a>
                 <a href="#board" class="nav" id="board-link">My Board</a>
                 <a href="#about" class="nav" id="about-link">About us</a>
+                <button class="logout-btn">LOGOUT</button>
             </div>
         </nav>
     </header>
@@ -125,26 +131,20 @@
             <div class="about-info-grid">
                 <div class="about-info-card">
                     <span>What is this project?</span><br><br>
-                    The Project Task Management Board is a lightweight Kanban-style tool we built to manage
-                    school assignments and group work. It runs right in your browser so you can keep track
-                    of what needs to get done without any complicated setup.
+                    Our Project Task Management System Board is a platform we built to help our team stay organized and keep track of all our assignments in one place. We created this tool to make collaboration easier, allowing us to monitor our progress on different tasks and ensure we hit our deadlines without the usual group project confusion.
                 </div>
                 <div class="about-info-card">
                     <span>Who built this?</span><br><br>
-                    We built this as a learning project to practice our web development skills. We stuck to the basics—using
-                    just HTML, CSS, and JavaScript. No fancy frameworks or external libraries, just clean code and a lot of
-                    trial and error!
+                    The website is built by students of BSIT 2nd year Block 3 for their final project in Integrative Programming and Web System Technologies.
                 </div>
                 <div class="about-info-card">
                     <span>How it works</span><br><br>
-                    You can create tasks, move them between columns as you work on them, and delete them when
-                    you're finished. Everything saves automatically in your browser's storage, so your progress won't disappear
-                    when you refresh the page.
+                    Our board works by breaking down the whole project into smaller, manageable tasks that move through different 
+                    stages. First, we list everything that needs to be done in the To Do column. As we start working, we move those tasks to In Progress, and finally to Done once they are finished. This way, everyone in the team can see exactly what’s being worked on, who is responsible for what, and how much we have left to do before the deadline.
                 </div>
                 <div class="about-info-card">
                     <span>Why use it?</span><br><br>
-                    Sometimes big project management tools are just too much for a simple school assignment. We wanted to make
-                    something fast and easy to use that gets out of your way so you can actually focus on finishing your homework.
+                    We built this system to keep our group work organized and make sure we never miss a deadline. By moving tasks from "To Do" to "Done," we can easily see how much progress we’ve made and who is working on what, which helps us avoid the stress of messy group chats and last-minute rushing.
                 </div>
             </div>
 
@@ -156,53 +156,61 @@
 
                     <div class="about-member-card">
                         <div class="about-member-header">
-                            <img src="member1.jpg" alt="Member 1" class="about-member-avatar">
+                            <img src="assets/profile-pictures/pau.png" alt="Member 1" class="about-member-avatar">
                             <div class="about-member-meta">
-                                <h3>Name Here</h3>
-                                <p class="about-member-role">Back End Developer</p>
-                            </div>
-                        </div>
-                        <p class="about-member-bio">Description ng member</p>
-                        <a href="cv1.pdf" class="about-member-btn">View CV</a>
-                    </div>
-
-                    <div class="about-member-card">
-                        <div class="about-member-header">
-                            <img src="member2.jpg" alt="Member 2" class="about-member-avatar">
-                            <div class="about-member-meta">
-                                <h3>Name Here</h3>
+                                <h3>Pauline Mazo</h3>
                                 <p class="about-member-role">Front End Developer</p>
                             </div>
                         </div>
                         <p class="about-member-bio">Description ng member</p>
-                        <a href="cv2.pdf" class="about-member-btn">View CV</a>
+                        <a href="CV/pauline-mazo/index.html" class="about-member-btn">View CV</a>
                     </div>
 
                     <div class="about-member-card">
                         <div class="about-member-header">
-                            <img src="member3.jpg" alt="Member 3" class="about-member-avatar">
+                            <img src="assets/profile-pictures/lota.jpg" alt="Member 2" class="about-member-avatar">
                             <div class="about-member-meta">
-                                <h3>Name Here</h3>
+                                <h3>Leslie Lota</h3>
                                 <p class="about-member-role">Front End Developer</p>
                             </div>
                         </div>
                         <p class="about-member-bio">Description ng member</p>
-                        <a href="cv3.pdf" class="about-member-btn">View CV</a>
+                        <a href="CV/leslie-lota/index.html" class="about-member-btn">View CV</a>
                     </div>
 
                     <div class="about-member-card">
                         <div class="about-member-header">
-                            <img src="member4.jpg" alt="Member 4" class="about-member-avatar">
+                            <img src="assets/profile-pictures/montesa.png" alt="Member 3" class="about-member-avatar">
                             <div class="about-member-meta">
-                                <h3>Name Here</h3>
+                                <h3>Jaisel Montesa</h3>
                                 <p class="about-member-role">Front End Developer</p>
                             </div>
                         </div>
                         <p class="about-member-bio">Description ng member</p>
+                        <a href="CV/jaisel-montesa/index.html" class="about-member-btn">View CV</a>
+                    </div>
+
+                    <div class="about-member-card">
+                        <div class="about-member-header">
+                            <img src="assets/profile-pictures/bassam.jpg" alt="Member 4" class="about-member-avatar">
+                            <div class="about-member-meta">
+                                <h3>Bassam Abdulcader</h3>
+                                <p class="about-member-role">taga luto ng pancit canton</p>
+                            </div>
+                        </div>
+                        <p class="about-member-bio">PABUHAT SA GRUPO!!</p>
                         <a href="cv4.pdf" class="about-member-btn">View CV</a>
                     </div>
 
                 </div>
+            </section>
+
+            <hr class="about-divider">
+
+            <section class="subPages">
+                <a href="">USER AGREEMENT</a>
+                <span>|</span>
+                <a href="">PRIVACY AND POLICY</a>
             </section>
 
         </section>

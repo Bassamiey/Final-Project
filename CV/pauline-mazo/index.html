@@ -1,0 +1,268 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pauline Mazo - Resume</title>
+
+
+    <style>
+        body {
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 0;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+
+        .container-p1 {
+            display: flex;
+            flex: 1;
+        }
+
+        .sidebar {
+            width: 35%;
+            background-color: #e9e9e9;
+            padding: 40px 30px;
+        }
+
+        .main-content {
+            width: 65%;
+            padding: 0;
+        }
+
+        .header-black {
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            z-index: 1;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+            margin-left: 150px; 
+        }
+
+        .header-black h1 {
+            margin: 0;
+            padding-left: 70px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 25px;
+        }
+        .header-black p{
+            padding-left: 70px;
+        }
+
+        .profile-img {
+            position: relative; 
+            z-index: 2;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 8px solid white;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        h2.section-title {
+            font-size: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            margin-top: 30px;
+        }
+
+        .content-padding { padding: 20px 40px; }
+
+
+        .page-header-grey{
+            background-color: #e9e9e9;
+            padding: 20px 40px;
+            font-weight: bold;
+            font-size: 25px;
+            text-transform: uppercase;
+            border-top: 2px solid #ccc;
+            border-bottom:  2px solid #ccc;
+            margin-top:0px;
+        }
+        
+        .page-header-grey2{
+            background-color: #e9e9e9;
+            padding: 0px 30px;
+            font-weight: bold;
+            font-size: 20px;
+            text-transform: uppercase;
+            border-top: 2px solid #ccc;
+        }
+
+        .content-padding{
+            padding-top: 50px;
+            font-size: 15px;
+        }
+       .section-title2{
+        font-size: 20px;
+        text-transform: uppercase;
+       }
+
+        .ref-section {
+            background-color: #e9e9e9;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: auto;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .signature-area {
+            padding: 40px;
+            text-align: right;
+            border-top: 1px solid #eee;
+        }
+
+        @media print {
+            body { background: none; }
+            .page { 
+                margin: 0; 
+                box-shadow: none; 
+                break-after: page; 
+            }
+            #page2 { break-before: page; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page" id="page1">
+        <div class="container-p1">
+            <div class="sidebar">
+                <img src="assets/profile.png" class="profile-img" alt="Profile">
+                <h2 class="section-title">Personal Information</h2>
+                <p style="font-size: 15px; line-height: 1.8;">
+                    Age: 23 years old <br>
+                    Date Of Birth: October 16, 2006 <br>
+                    Gender: Female <br>
+                    Civil Status: Single <br>
+                    Nationality: Filipino <br>
+                    Father: Lupo F. Mazo <br>
+                    Occupation: None (Retired) <br>
+                    Mother: Carolina M. Mazo <br>
+                    Occupation: House Wife
+                </p><br><br>
+                <h2 class="section-title">Contact</h2>
+                <p style="font-size: 12px;">
+                    <p><img src="assets/phone.jpg" alt="phone" align="left" hspace="5" width="30" height="30">
+                <strong>Phone</strong><br>
+                +69948-548-5543</p>
+                <p><img src="assets/mail.jpg" alt="email" align="left" hspace="5" width="30" height="30">
+                    <strong>Email</strong>
+                    paulinemazo@
+                    gmail.com</p>
+                <p><img src="assets/address.jpg" alt="address" align="left" hspace="5" width="30" height="30">
+                    <strong>Address</strong><br>
+                    Bagacay Romblon, Romblon</p>
+                <p><img src="assets/comp.jpg" alt="socials" align="left" hspace="5" width="30" height="30">
+                    <strong>Socials</strong>
+                    www.facebook.com
+                    /paulinemazo.1</p> 
+                </p>
+            </div>
+
+            <div class="main-content">
+                <div class="header-black">
+                    <h1>Pauline Grace M. Mazo</h1>
+                    <p style="font-size: 15px; color: #ccc;">A proven ability to learn new systems and tools. 
+                        Seeking to utilize skills in web development and 
+                        technical documentation to assist a collaborative 
+                        team in achieving digital goals while developing 
+                        professional industry expertise.</p>
+                </div><br><br><br><br><br><br><br><br><br>
+                <div class="content-padding">
+                    <h2 class="section-title">Educational Attainment</h2>
+                    <ul>
+                        <li><h3>TERTIARY EDUCATION</h3></li>
+                        <p>SCHOOL: Romblon State University - Main Campus <br>
+                            DEGREE: BS Information Technology (2024-2028)<br>
+                            ADDRESS: Liwanag Odiongan, Romblon <br>
+                            SCHOOL YEAR: 2024 - 2028</p>
+
+                        <li><h3>SECONDARY EDUCATION</h3></li>
+                        <p>SCHOOL: Romblon National High School <br>
+                            ADDRESS: Tarifa Street, Romblon, Romblon <br>
+                            SCHOOL YEAR: 2018 - 2024</p>
+
+                        <li><h3>ELEMENTARY EDUCATION</h3></li>
+                        <p>SCHOOL: Romblon East Central School <br>
+                            ADDRESS: Brgy. Capaclan Romblon, Romblon <br>
+                            SCHOOL YEAR: 2013 - 2018</p>
+                    </ul>
+                    <br>
+                    <b>_________________________________________________________________</b>
+                    <h2 class="section-title2">Expertise Skills</h2>
+                    <ul style="font-size: 15px;">
+                        <li>Communication Skills</li>
+                        <li>Analytical and Critical Thinking</li>
+                        <li>Digital Literacy</li>
+                        <li>Leadership Potential</li>
+                        <li>Time Management abilities</li>
+                    </ul>
+                    <br>
+                    <h2 class="section-title2">experiences </h2>
+                    <ul>
+                        <li>IT Intern - Romblon State University - Main Campus</li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="page2">
+        <div class="page-header-grey"><h2>Trainings and Seminars</h2></div>
+        <div class="content-padding">
+            <ul style="line-height: 2; font-size: 25px;">
+                <li><b>Cybersecurity Fundamentals:</b> Securing The Digital Landscape (Nov 15, 2025)</li> <br>
+                <li><b>Advance Data Analytics:</b> Visualization Workshop (Aug 12, 2025)</li> <br>
+                <li><b>Cloud Computing Strategies:</b> (June 5, 2025)</li> <br>
+                <li><b>Modern Web Architecture:</b> Full-Stack Development (April 20, 2025)</li>
+            </ul>
+        </div>
+
+        <div class="page-header-grey2"><h2>Character References</h2></div>
+        <div class="ref-section">
+            <div style="font-size: 20px;">
+                <b>DR. CATHERINE BHEL B. AGUILA</b><br>042 - 111 - 0064<br>Director, IT<br>Romblon State University<br>Liwanag Odiongan, Romblon
+            </div>
+            <div style="font-size: 20px;">
+                _________________________________<br><br>
+                <b>Prof. PJ ZEDER M. DRILON</b><br>09491224495<br>Lecturer<br>Romblon State University <br>Liwanag Odiongan, Romblon
+            </div>
+        </div>
+
+        <div class="signature-area">
+            <p style="font-size: 20px; text-align: left; float: left; width: 50%;">
+                             I hereby certify that the above information is true 
+                             and correct to the best of my knowldge and belief.</p>
+            <div style="font-size:20px; text-align: center;">
+                <br>________________________________<br>
+                <b>Pauline Grace M. Mazo</b><br>Applicant
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

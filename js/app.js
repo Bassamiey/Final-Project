@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    //login status
+    //active page
     let loginStat = sessionStorage.getItem("login status");
 
     if (loginStat !== "true") {
     window.location.href = "loginpage.html";
     }
+
 
     // ── Navigation ──
     let homeLink = document.querySelector("#home-link");
@@ -13,9 +14,20 @@ document.addEventListener("DOMContentLoaded", function() {
     let aboutLink = document.querySelector("#about-link");
 
     function navigateTo(page) {
-        document.querySelector("#home").style.display  = page === "home"  ? "block" : "none";
-        document.querySelector("#board").style.display = page === "board" ? "grid"  : "none";
-        document.querySelector("#about").style.display = page === "about" ? "block" : "none";
+        let homeEl  = document.querySelector("#home");
+        let boardEl = document.querySelector("#board");
+        let aboutEl = document.querySelector("#about");
+
+        homeEl.style.display  = "none";
+        boardEl.style.display = "none";
+        aboutEl.style.display = "none";
+
+        let target = page === "home" ? homeEl : page === "board" ? boardEl : aboutEl;
+        let displayVal = page === "board" ? "grid" : "block";
+
+        target.style.display = displayVal;
+        target.classList.remove("section-animate");
+        target.classList.add("section-animate");
 
         homeLink.classList.toggle("activeNav",  page === "home");
         boardLink.classList.toggle("activeNav", page === "board");
@@ -170,4 +182,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     loadBoard();
+
+    let logoutBtn = document.querySelector(".logout-btn");
+
+    logoutBtn.addEventListener("click", () => {
+        sessionStorage.removeItem("login status");
+        sessionStorage.removeItem("activePage");
+        window.location.href = "loginpage.html";
+    }); 
 });

@@ -26,8 +26,9 @@ body {
 header {
     background-color: var(--color-surface);
     border-bottom: 1px solid var(--color-border);
-    padding: 10px 20px;
+    padding: 10px;
     width: 100%;
+    height: 70px;
 }
 
 nav {
@@ -39,13 +40,28 @@ nav {
 }
 
 nav .logo {
+    height: 30px;
     display: flex;
     align-items: center;
+    gap: 8px;
+}
+
+nav .logo img {
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+    display: block;
+}
+
+nav .logo span {
+    line-height: 1;
 }
 
 nav .nav-links {
+    height: 30px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 10px;
 }
 
@@ -56,19 +72,32 @@ nav .nav-links a {
     padding: 6px 14px;
     border: 1px solid transparent;
     border-radius: 6px;
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
 nav .nav-links a:hover {
     color: white;
 }
 
+nav .logout-btn {
+    cursor: pointer;
+    border: none;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    transition: 0.5s;
+    padding: 6px 14px;
+}
+
+nav .logout-btn:hover {
+    color: white;
+}
 .activeNav {
     color: var(--color-accent);
     border: 1px solid var(--color-accent);
     background-color: var(--color-accent-dim);
     border-radius: 6px;
     padding: 6px 14px;
+    height: 35px;
 }
 
 main {
@@ -209,8 +238,10 @@ main {
 .board-sec {
     display: none;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px;
     gap: 10px;
     width: 100%;
+    height: 100vh;
 }
 
 .board-header {
@@ -603,4 +634,35 @@ main {
 
 .btn-confirm:hover {
     filter: brightness(1.15);
+}
+
+/* ── Section Transitions ── */
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.section-animate {
+    animation: slideInFromRight 0.35s ease forwards;
+}
+
+.subPages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-text);
+    pad: 20px 20px;
+}
+
+.subPages a {
+    text-decoration: none;
+    color: var(--color-text);
+    width: 35%;
 }
