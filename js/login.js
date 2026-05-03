@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", function() {
     
     const credential = {
     bassam: { password: "bassam123" },
-    pau:    { password: "pau123" }
+    pauline: { password: "pauline106" },
+    jaisel: { password: "jaisel20" },
+    leslie: { password: "leslie48" }
     }
 
     function login (username, password) {
