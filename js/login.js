@@ -1,21 +1,27 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+    let loginStat = sessionStorage.getItem("login status");
+
+    if (loginStat === "true") {
+    window.location.href = "index.html";
+    }
+
     let loginBtn = document.querySelector("#login-btn");
     let loginUsername = document.querySelector("#login-username");
     let loginPassword = document.querySelector("#login-password");
     
-
     const credential = {
     bassam: { password: "bassam123" },
     pau:    { password: "pau123" }
-}
+    }
 
     function login (username, password) {
 
         let user = credential[username];
 
         if (user && user.password === password ){
-            window.location.href = "index.html"
+            sessionStorage.setItem("login status", "true");
+            window.location.href = "index.html";
         }else {
             alert("Invalid Username or Password")
         }

@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+    //login status
+    let loginStat = sessionStorage.getItem("login status");
+
+    if (loginStat !== "true") {
+    window.location.href = "loginpage.html";
+    }
+
     // ── Navigation ──
     let homeLink = document.querySelector("#home-link");
     let boardLink = document.querySelector("#board-link");
