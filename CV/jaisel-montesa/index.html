@@ -58,7 +58,24 @@
             position: relative;
             top: 2px;
         }
-        
+
+        #separator {
+            width: 100%;
+            border: none;
+            border-top: 1px solid black;
+            opacity: 0.5;
+            margin: 40px 0;
+        }
+
+        #back-button-section {
+            pad: 20px 10px;
+            margin-bottom: 50px;
+        }
+
+        #back-button-section button {
+            height: 30px;
+            width: 80px;
+        }
     </style>
 
 </head>
@@ -175,5 +192,15 @@
             </td>
         </tr>
     </table>
+
+    <hr id="separator">
+    <div id="back-button-section" align="center">
+        <button id="back button" onclick="back()" >BACK</button>
+    </div>
 </body>
+    <script>
+        function back () {
+            window.location.href = "../../../index.html";
+        }
+    </script>
 </html>
