@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-container {
+    margin: 10px ;
+    border: 1px solid black;
+    max-width: 90%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    padding: 30px;
+    gap: 30px;
+}
+
+.main.container ul {
+    margin: 0 0  0 10px;
+}
+
+div {
+    overflow: hidden;
+}
+
+ul {
+    padding-left: 30px;
+}
+
+.my-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 1px solid black;
+}
+
+.my-profile p {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.my-contactsInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.my-contactsInfo img{
+    width: 20px;
+}
+
+.cellNum {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+}
+
+.emailAdd {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+}
+
+.address {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+}
+
+
+
+
+
+
+

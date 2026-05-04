@@ -652,6 +652,7 @@ main {
     animation: slideInFromRight 0.35s ease forwards;
 }
 
+/* subpages */
 .subPages {
     display: flex;
     justify-content: center;
@@ -665,4 +666,5 @@ main {
     text-decoration: none;
     color: var(--color-text);
     width: 35%;
+    font-weight: bold;
 }
