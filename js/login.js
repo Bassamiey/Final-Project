@@ -7,8 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
     window.location.href = "index.html";
     }
 
-    //login buttons
-    let loginBtn = document.querySelector("#login-btn");
+
+    //form
+    let form = document.getElementById("loginForm");
 
     //login inputs
     let loginUsername = document.querySelector("#login-username");
@@ -35,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    loginBtn.addEventListener("click", () => {
+    form.addEventListener("submit", () => {
         login(loginUsername.value, loginPassword.value);
     });
 
