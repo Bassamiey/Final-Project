@@ -246,3 +246,23 @@ body {
     outline-offset: 2px;
 }
 
+/* ── Responsive Design (Mobile Alignment) ── */
+
+@media (max-width: 480px) {
+    .logIn-container, .sigUp-container {
+        width: 95%;
+        padding: 20px 15px;
+    }
+
+    .logIn-container h1, .sigUp-container h1 {
+        font-size: 36px;
+        height: 60px;
+    }
+
+    .per-input-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+

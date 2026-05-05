@@ -656,6 +656,7 @@ main {
 }
 
 /* subpages */
+
 .subPages {
     display: flex;
     justify-content: center;
@@ -670,4 +671,116 @@ main {
     color: var(--color-text);
     width: 35%;
     font-weight: bold;
+}
+
+/* ── Responsive Design (Mobile Alignment) ── */
+
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        height: auto;
+        padding: 5px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    nav .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    /* Home Section */
+    .home-hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .home-headline {
+        font-size: 32px;
+    }
+
+    .home-features {
+        grid-template-columns: 1fr;
+    }
+
+    /* Board Section */
+    .board-sec {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+    }
+
+    .board-header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    #header-right {
+        flex-direction: column;
+    }
+
+    .column {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    /* About Section */
+    .about-info-card {
+        width: 100%;
+    }
+
+    .about-title {
+        font-size: 32px;
+    }
+
+    .about-team-roster {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    /* Subpages links */
+    .subPages {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .subPages span {
+        display: none;
+    }
+
+    .subPages a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-headline {
+        font-size: 28px;
+    }
+
+    .home-preview {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .preview-col {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .modal {
+        width: 95%;
+        padding: 16px;
+    }
 }

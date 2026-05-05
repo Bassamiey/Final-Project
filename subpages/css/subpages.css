@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg:          #06141B;
+    --color-surface:     #11212D;
+    --color-card:        #253745;
+    --color-border:      #4A5C6A;
+    --color-text-muted:  #9BA8AB;
+    --color-text:        #CCD0CF;
+    --color-accent:      #4FC3F7;
+    --color-accent-dim:  rgba(79, 195, 247, 0.12);
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    padding: 10px 20px;
+    gap: 10px;;
+}
