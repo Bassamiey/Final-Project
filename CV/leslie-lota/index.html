@@ -5,73 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LabAct12_April12</title>
 <style>
-.design1{
-    background-color: #540917;
-    align-items: center;
-}
-.design2{
-    background-color: #540917;
-    
-}
-.design3{
-color:goldenrod;
-}
-.design4{
-    color:aliceblue;
-     background-color: #540917;
-}
-.design5{
-    color:aliceblue;
-    background-color: #540917;
-}
-.contact{
- color: goldenrod;
- font-weight: bold;
-}
-.person{
-  color:goldenrod;
-  font-weight: bold;
-}
-.references{
-  color:goldenrod;
-  font-weight: bold;
-}
-.pic{
-    width: 350px;
-    height: 350px;
-}
-.applicant{
-    font-weight: bold;
-}
-.edu{
-    font-weight: bold;
-}
-.ach{
-    font-weight: bold;
-}
-.exp{
-    font-weight: bold;
-}
+    :root {
+    --color-bg:          #06141B;
+    --color-surface:     #11212D;
+    --color-card:        #253745;
+    --color-border:      #4A5C6A;
+    --color-text-muted:  #9BA8AB;
+    --color-text:        #CCD0CF;
+    --color-accent:      #4FC3F7;
+    --color-accent-dim:  rgba(79, 195, 247, 0.12);
+    }
 
-#separator {
-    width: 100%;
-    border: none;
-    border-top: 1px solid black;
-    opacity: 0.5;
-    margin: 40px 0;
-}
+    body {
+        background-color: var(--color-surface);
+    }
+    .design1{
+        background-color: #540917;
+        align-items: center;
+    }
+    .design2{
+        background-color: #540917;
+        
+    }
+    .design3{
+    color:goldenrod;
+    }
+    .design4{
+        color:aliceblue;
+        background-color: #540917;
+    }
+    .design5{
+        color:aliceblue;
+        background-color: #540917;
+    }
+    .contact{
+    color: goldenrod;
+    font-weight: bold;
+    }
+    .person{
+    color:goldenrod;
+    font-weight: bold;
+    }
+    .references{
+    color:goldenrod;
+    font-weight: bold;
+    }
+    .pic{
+        width: 350px;
+        height: 350px;
+    }
+    .applicant{
+        font-weight: bold;
+    }
+    .edu{
+        font-weight: bold;
+    }
+    .ach{
+        font-weight: bold;
+    }
+    .exp{
+        font-weight: bold;
+    }
 
-#back-button-section {
-    pad: 20px 10px;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
-}
+    #separator {
+        width: 100%;
+        border: none;
+        border-top: 1px solid black;
+        opacity: 0.5;
+        margin: 40px 0;
+    }
 
-#back-button-section button {
-    height: 30px;
-    width: 80px;
-}
+    #back-button-section {
+        pad: 20px 10px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #back-button-section button {
+        height: 30px;
+        width: 80px;
+        border-color: var(--color-border);
+        color: var(--color-text);
+        background-color: var(--color-card);
+    }
+    td {
+        padding: 10px 10px;
+        background-color: white;
+    }
     </style>
 </head>
 <body>

@@ -6,6 +6,21 @@
     <title></title>
 
     <style>
+        :root {
+            --color-bg:          #06141B;
+            --color-surface:     #11212D;
+            --color-card:        #253745;
+            --color-border:      #4A5C6A;
+            --color-text-muted:  #9BA8AB;
+            --color-text:        #CCD0CF;
+            --color-accent:      #4FC3F7;
+            --color-accent-dim:  rgba(79, 195, 247, 0.12);
+        }
+
+        body {
+            background-color: var(--color-surface);
+        }
+
         .profile {
             width: 150px;
             height: 150px;
@@ -75,7 +90,16 @@
         #back-button-section button {
             height: 30px;
             width: 80px;
+            border-color: var(--color-border);
+            color: var(--color-text);
+            background-color: var(--color-card);
+            cursor: pointer;
         }
+
+        #separator {
+            border-color: var(--color-accent);
+        }
+
     </style>
 
 </head>
