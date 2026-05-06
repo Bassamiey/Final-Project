@@ -25,6 +25,60 @@ body {
 }
 
 /* login card */
+.intro-container {
+    width: fit-content;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+    gap: 20px;
+}
+
+.intro-container h1 {
+    font-size: 50px;
+}
+
+.intro-container p {
+    color: var(--color-text-muted);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.intro-container button {
+    margin-top: 100px;
+    width: 20%;
+    height: 42px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.1s;
+}
+
+.intro-container button:hover {
+    background-color: var(--color-card);
+    border-color: var(--color-text-muted);
+}
+
+.animated-text {
+    animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .logIn-container {
     background-color: var(--color-surface);
     width: 400px;
@@ -263,6 +317,13 @@ body {
         flex-direction: column;
         gap: 0;
     }
+}
+
+/* Visibility toggling without !important */
+.intro-container.hidden,
+.logIn-container.hidden,
+.sigUp-container.hidden {
+    display: none;
 }
 
 

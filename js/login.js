@@ -7,9 +7,15 @@ document.addEventListener("DOMContentLoaded", function() {
     window.location.href = "index.html";
     }
 
+    // Toggle logic
+    const introContainer = document.getElementById("intro-container");
+    const loginBtn = document.getElementById("show-login");
+    const loginForm = document.getElementById("loginForm");
 
-    //form
-    let form = document.getElementById("loginForm");
+    loginBtn.addEventListener("click", () => {
+        introContainer.classList.add("hidden");
+        loginForm.classList.remove("hidden");
+    });
 
     //login inputs
     let loginUsername = document.querySelector("#login-username");
@@ -36,7 +42,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    form.addEventListener("submit", () => {
+    loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
         login(loginUsername.value, loginPassword.value);
     });
 

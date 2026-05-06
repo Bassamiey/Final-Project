@@ -346,6 +346,15 @@ main {
     width: 100%;
 }
 
+.btn-edit {
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: 6px;
+    padding: 5px 12px;
+    cursor: pointer;
+    width: 50%;
+}
+
 .btn-delete {
     background-color: #ff4d4d;
     color: white;

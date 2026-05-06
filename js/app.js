@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let loginStat = sessionStorage.getItem("login status");
 
     if (loginStat !== "true") {
-    window.location.href = "loginpage.html";
+        window.location.href = "loginpage.html";
     }
 
 
@@ -48,17 +48,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ── Modal ──
     let modalOverlay = document.getElementById('modal-overlay');
+    let modalHeadline = document.getElementById('modal-headline');
     let modalTitle = document.getElementById('modal-title');
     let modalDesc = document.getElementById('modal-desc');
-    let btnConfirm = document.querySelector('.btn-confirm');
+    let btnConfirm = document.getElementById('btn-confirm');
     let btnCancel = document.getElementById('btn-cancel');
     let btnClose = document.getElementById('modal-close');
     let currentColumn = '';
+    let editingTaskId = null;
 
-    function openModal(column) {
+    function openModal(column, task = null) {
         currentColumn = column;
-        modalTitle.value = '';
-        modalDesc.value = '';
+        if (task) {
+            editingTaskId = task.id;
+            modalHeadline.textContent = 'Edit Task';
+            modalTitle.value = task.title;
+            modalDesc.value = task.desc;
+            btnConfirm.textContent = 'Save Changes';
+        } else {
+            editingTaskId = null;
+            modalHeadline.textContent = 'Add Task';
+            modalTitle.value = '';
+            modalDesc.value = '';
+            btnConfirm.textContent = 'Add Task';
+        }
         modalOverlay.classList.add('open');
         modalTitle.focus();
     }
@@ -74,7 +87,12 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(() => modalTitle.style.borderColor = '', 800);
             return;
         }
-        addTask(currentColumn, title, modalDesc.value.trim());
+
+        if (editingTaskId) {
+            updateTask(currentColumn, editingTaskId, title, modalDesc.value.trim());
+        } else {
+            addTask(currentColumn, title, modalDesc.value.trim());
+        }
         closeModal();
     });
 
@@ -111,6 +129,17 @@ document.addEventListener("DOMContentLoaded", function() {
         saveBoard();
     }
 
+    // ── Update Task ──
+    function updateTask(column, id, title, desc) {
+        let task = board[column].find(t => t.id == id);
+        if (task) {
+            task.title = title;
+            task.desc = desc;
+            renderColumn(column);
+            saveBoard();
+        }
+    }
+
     // ── Render Column ──
     function renderColumn(column) {
         let columnEl = document.getElementById('col-' + column);
@@ -126,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <div class="task-actions">
                     ${column !== 'todo' ? `<button class="btn-move" onclick="moveTask(${task.id}, '${column}', 'prev')">← Back</button>` : ''}
                     ${column !== 'done' ? `<button class="btn-move" onclick="moveTask(${task.id}, '${column}', 'next')">Next →</button>` : ''}
+                    <button class="btn-edit" onclick="editTask(${task.id}, '${column}')">Edit</button>
                     <button class="btn-delete" onclick="deleteTask(${task.id}, '${column}')">Delete</button>
                 </div>
             `;
@@ -133,6 +163,14 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         updateCounts();
+    }
+
+    // ── Edit Task ──
+    window.editTask = function(id, column) {
+        let task = board[column].find(t => t.id == id);
+        if (task) {
+            openModal(column, task);
+        }
     }
 
     // ── Move Task ──
