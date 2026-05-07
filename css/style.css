@@ -503,6 +503,10 @@ main {
     height: 30px;
 }
 
+.about-member-bio a {
+    text-decoration: none;
+}
+
 .about-member-btn {
     display: block;
     text-align: center;
