@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let task = {
             id: Date.now(),
             title: title,
-            desc: desc || ''
+            desc: desc
         }
         board[column].push(task);
         renderColumn(column);
@@ -132,12 +132,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // ── Update Task ──
     function updateTask(column, id, title, desc) {
         let task = board[column].find(t => t.id == id);
-        if (task) {
-            task.title = title;
-            task.desc = desc;
-            renderColumn(column);
-            saveBoard();
-        }
+        task.title = title;
+        task.desc = desc;
+        renderColumn(column);
+        saveBoard();
     }
 
     // ── Render Column ──
@@ -168,9 +166,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // ── Edit Task ──
     window.editTask = function(id, column) {
         let task = board[column].find(t => t.id == id);
-        if (task) {
-            openModal(column, task);
-        }
+        openModal(column, task);
     }
 
     // ── Move Task ──
